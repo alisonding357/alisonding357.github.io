@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+</head>
+<body>
+
+    <div id="page0" class="page"></div>
+        <h1>The Challenges</h1>
+        <p>A few things before we start. First, sorry for the jankiness in some parts of the website. Second, if for some reason you need hints or are really stuck at any point you can feel free to text me. You probably won't need any though, because the challenges are pretty easy and allow multiple attempts. The "Next" button will show up after you beat each challenge and will reveal the next one (some of the buttons are off-centered, sorry). There are 3 total challenges. <br> <br>
+        Furthermore, there are a few things you should beware of doing:  </p>
+        <ul>
+            <li>If you refresh at any point, the entire page resets</li>
+            <li>If you click "Intro", you will go back to the previous page and the entire challenges page will reset </li>
+            <li>If you click "The Challenges" button, the entire page resets</li>
+            <li>If you click into a textbox that takes input then press the enter/return key, the entire page resets</li>
+        </ul>
+        <p>TLDR, clicking a lot of things can reset the entire page, so watch out. </p>
+    
+
+        <div class="button-container">
+            <button onclick="showNextPage('page1')" id = "nextButtonn">Next</button>
+        </div>
+    </div>
+    <!-- Puzzle 1 -->
+    <!--  Who said it?? game  -->
+    <div id="page1" class="page" style="display: none;">
+        <h1>Challenge 1: Who Said It?</h1>
+        <p> Okay, so you've probably got the answer to some of these because I made George send me his compilation and stole some of these off there. But how good is your memory? </p>
+        <!-- Add your puzzle content here -->
+        <div id="question1" class="question">
+            1. "Lowkey I fuck with Xijing Ping."<br>
+            <input type="radio" name="question1">Zichu <br>
+            <input type="radio" name="question1">Jax <br>
+            <input type="radio" name="question1" id="correct1">Eric <br>
+            <input type="radio" name="question1">Evan <br>
+            <input type="radio" name="question1">Alison <br>
+            <input type="radio" name="question1">George <br>
+            <button onclick="result('correct1','question2', 'output1.1')">Submit</button>
+        </div>
+        <p id = "output1.1"> </p>
+
+        <div id="question2" class="question" style="display: none;">
+            2. "We're locked the fuck out"<br>
+            <input type="radio" name="question2">Zichu <br>
+            <input type="radio" name="question2" id="correct2">Jax <br>
+            <input type="radio" name="question2">Eric <br>
+            <input type="radio" name="question2">Evan <br>
+            <input type="radio" name="question2">Alison <br>
+            <input type="radio" name="question2">George <br>
+            <button onclick="result('correct2', 'question3', 'output1.2')">Submit</button>
+        </div>
+        <p id = "output1.2"> </p>
+
+        <div id="question3" class="question" style="display: none;">
+            3. "Do you want to be the Brutus to my Caesar and penetrate me 23 times?"<br>
+            <input type="radio" name="question3" id="correct3">Zichu <br>
+            <input type="radio" name="question3">Jax <br>
+            <input type="radio" name="question3" >Eric <br>
+            <input type="radio" name="question3">Evan <br>
+            <input type="radio" name="question3">Alison <br>
+            <input type="radio" name="question3">George <br>
+            <button onclick="result('correct3', 'question4', 'output1.3')">Submit</button>
+        </div>
+        <p id = "output1.3"> </p>
+
+        <div id="question4" class="question" style="display: none;">
+            4. "My only touching story is how I touch children."<br>
+            <input type="radio" name="question4" id="correct4">Zichu <br>
+            <input type="radio" name="question4">Jax <br>
+            <input type="radio" name="question4" >Eric <br>
+            <input type="radio" name="question4">Evan <br>
+            <input type="radio" name="question4">Alison <br>
+            <input type="radio" name="question4">George <br>
+            <button onclick="result('correct4', 'question5', 'output1.4')">Submit</button>
+        </div>
+        <p id = "output1.4"> </p>
+
+        <div id="question5" class="question" style="display: none;">
+            5. "The only A I have is in my name."<br>
+            <input type="radio" name="question5">Zichu <br>
+            <input type="radio" name="question5">Jax <br>
+            <input type="radio" name="question5" >Eric <br>
+            <input type="radio" name="question5">Evan <br>
+            <input type="radio" name="question5" id="correct5">Alison <br>
+            <input type="radio" name="question5">George <br>
+            <button onclick="result('correct5', 'none', 'output1.5')">Submit</button>
+        </div>
+        <p id = "output1.5"> </p>
+
+            <button onclick="showNextPage('page2')" id = "nextButton" style="display: none;">Next</button>
+        
+    </div>
+
+    <!-- Puzzle 2 -->
+    <!-- connections with stever 5b -->
+    <div id="page2" class="page" style="display: none;">
+        <h1>Challenge 2: What in the Wordle?</h1>
+        <p> Here's an actual puzzle for you. When you find the answer (which is some phrase), type it into the box below.</p>
+        <IMG SRC="wordle.png">
+        <!-- Add your puzzle content here -->
+        <h4>Enter your answer for the puzzle (all lowercase, spaces between words, no period at end please). </h4>
+        <form>
+            <label for="pswd">Enter your answer: </label>
+            <input type="text" id="pswd">
+            <input type="button" value="Submit" onclick="result2();" />
+        </form>
+        <p id = "output"> </p>
+            
+        <button onclick="showNextPage('page3')" id = "nnextButton" style="display: none;">Next</button>
+    </div>
+
+    <!-- Puzzle 3 -->
+    <div id="page3" class="page" style="display: none;">
+        <h1>Game 3: Filter Frenzy</h1>
+        <p>So here's how this works: you try to guess the common English phrase from my very badly edited Snapchat filter pics. For example . . . 
+        <IMG SRC="horses.JPG" width="250" height="350"><br>
+        is "hold your horses". Got it? As usual, no capitalization or punctuation.</p>
+        <!-- Add your puzzle content here -->
+        <div id="question3.1" class="question">
+            <p>1. <IMG SRC="fish.JPG" width="250" height="350"> <br> (4 words) </p>
+            <form>
+                <label for="pswd3">Question 1 Answer: </label>
+                <input type="text" id="pswd3">
+                <input type="button" value="Submit" onclick="result3('fish out of water', 'question3.2','pswd3', 'output1');" />
+            </form>
+        </div>
+        <p id = "output1"> </p>
+        
+
+        <div id="question3.2" class="question" style="display: none;">
+            <p> 2. <IMG SRC="bird.JPG" width="250" height="350"> <IMG SRC="stone.JPG" width="250" height="350"> <IMG SRC="bird2.JPG" width="250" height="350"> <br> (4 words)</p>
+            <form>
+                <label for="pswd4">Question 2 Answer: </label>
+                <input type="text" id="pswd4">
+                <input type="button" value="Submit" onclick="result3('two birds one stone', 'question3.3','pswd4', 'output2');" />
+            </form>
+            <p id = "output2"> </p>
+        </div>
+        
+
+        <div id="question3.3" class="question" style="display: none;">
+            <p> 3. <IMG SRC="cook.JPG" width="250" height="350"> <IMG SRC="book.JPG" width="250" height="350"> <br> (3 words)</p>
+            <form>
+                <label for="pswd5">Question 3 Answer: </label>
+                <input type="text" id="pswd5">
+                <input type="button" value="Submit" onclick="result3('cook the books', 'question3.4','pswd5', 'output3');" />
+            </form>
+        </div>
+        <p id = "output3"> </p>
+        
+
+        <div id="question3.4" class="question" style="display: none;">
+            <p>4. <IMG SRC="blood.JPG" width="250" height="350"> <IMG SRC="sweat.JPG" width="250" height="350"> <IMG SRC="tears.JPG" width="250" height="350"><br> (4 words)</p>
+            <form>
+                <label for="pswd6">Question 4 Answer: </label>
+                <input type="text" id="pswd6">
+                <input type="button" value="Submit" onclick="result3('blood sweat and tears', 'none','pswd6', 'output4');" />
+            </form>
+        </div>
+        <p id = "output4"> </p>
+        
+        <button onclick="showFinalPage()" id = "lastButton" style="display: none;">Next</button>
+    </div>
+
+    <!-- Final Page -->
+    <div id="finalPage" class="page" style="display: none;">
+        <h1>Congratulations! You beat all the games!</h1>
+        <IMG SRC="cat_gif.gif">
+        <button onclick="showGifts()">Gifts!!!</button>
+        <!-- Add your final content here -->
+    </div>
+
+    <div class="pagination">
+        <a href="index1.html" >Intro</a>
+        <a href="index2.html" class="active">The Challenges</a>
+    </div>
+
+    <script>
+        function showNextPage(pageId) {
+            var currentPage = document.getElementById(pageId);
+            currentPage.style.display = 'block';
+        }
+
+        function showFinalPage() {
+            var finalPage = document.getElementById('finalPage');
+            finalPage.style.display = 'block';
+        }
+
+        function showGifts() {
+            window.open('index3.html', '_blank');
+        }
+
+        
+        function result(elemID, nextQuestionID, outputID) {
+            var output = document.getElementById(outputID)
+	        if(document.getElementById(elemID).checked){
+                if(nextQuestionID == 'none') {
+                    document.getElementById('nextButton').style.display = 'block';
+                }
+                output.innerHTML = "Nice! You got it :)";
+                document.getElementById(nextQuestionID).style.display = 'block';
+		    }
+            else {
+                output.innerHTML = "Nope . . . try again!";
+            }
+        }
+
+        function result2() {
+            var confirmPassword = "loving you is the best";
+            var password = document.getElementById("pswd").value;
+            if (password == confirmPassword) {
+                output.innerHTML = "Nice! You got it :)";
+                document.getElementById('nnextButton').style.display = 'block'
+                document.getElementById('nnextButton').style = "background-color: #0056b3; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;";
+            }
+            else{
+                output.innerHTML = "Nope, try again.";
+            }
+        }
+
+        function result3(ans,nextQuestionID,pswdID,outputID) {
+            var output = document.getElementById(outputID)
+            var password = document.getElementById(pswdID).value;
+            if (password === ans) {
+                if(nextQuestionID == 'none') {
+                    document.getElementById('lastButton').style.display = 'block';
+                }
+
+                output.innerHTML = "Nice! You got it :)";
+                document.getElementById(nextQuestionID).style.display = 'block';
+            }
+            else{
+                output.innerHTML = "Nope, try again.";
+            }
+        }
+    </script>
+    
+</body>
+</html>
