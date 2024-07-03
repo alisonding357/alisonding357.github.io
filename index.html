@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h1> Happy Birthday</h1>
-    <p> to the best boyfriend in the world. </p>
-    <div class="image-container1"></div>
-        <IMG SRC="aron1.GIF" width="350" height="350"> 
-        <IMG SRC="aron2.GIF" width="350" height="350"> 
-        <IMG SRC="aron3.GIF" width="350" height="350"> 
-        <IMG SRC="aron4.GIF" width="350" height="350"> 
-    </div>
-    <p>Literally so handsome </p>
-
-    <div class="image-container">
-        <IMG SRC="aron5.GIF" width="500" height="500" id = "last_pic">
-    </div>
-
-    <p> I've got a gift for you, but you'll have to solve a few challenges first to get it.  </p>
-
-    <div class="pagination">
-        <a href="index.html" class="active">Intro</a>
-        <a href="index2.html">The Challenges</a>
-    </div>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title> Alison Ding</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="index.html">Alison Ding</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cmu.html">CMU Courses</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Alison<br /></span>
+          </h1>
+          <p class="description">
+            I'm currently a sophomore at <b>CMU</b> majoring
+            in <b>Computer Science</b>. 
+            
+          </p>
+          <p class = "description">You might be interested in: </p>
+          <div class="action__btns">
+            <a href = "projects.html">
+              <button class="cs_projects">CS Projects</button>
+            </a>
+            <a href = "cmu.html">
+              <button class="cmu_courses">CMU Coursework</button>
+            </a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="assets/me.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
