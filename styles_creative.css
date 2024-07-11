@@ -130,7 +130,7 @@ h2{
   font-weight: 600;
   line-height: 2rem;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .content ul.content-list {
@@ -150,6 +150,28 @@ h2{
   color: var(--text-light);
   font-weight: 600;
 }
+
+
+.special-link {
+  color: var(--primary-color);
+  font-weight: bold; 
+  border: none; 
+}
+
+.special-link:hover {
+  color: var(--primary-color-dark); 
+  border: none;
+}
+
+.content-list a.special-link {
+  padding: 0; 
+  border: none;
+}
+
+.content-list a.special-link:hover {
+  border: none; 
+}
+
 
 .title span {
   font-weight: 600;
@@ -181,10 +203,12 @@ h2{
   text-align: left;
   color: var(--text-light);
   padding: 1rem;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   unicode-bidi: isolate;
   word-wrap: break-word;
 }
@@ -193,7 +217,8 @@ h2{
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-color) !important;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 0;
   word-wrap: break-word;
 }
 
@@ -206,6 +231,8 @@ h2{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding:0;
+  margin: 0;
 }
 
 
