@@ -238,7 +238,8 @@ h2{
 .header{
   text-align: left;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 800;
+  font-family: "Fraunces", serif;
   color: var(--primary-color) !important;
   padding-left: 1rem;
   padding-bottom: 0;
